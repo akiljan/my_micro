@@ -1,6 +1,6 @@
 from flask import Flask
 import redis
-r=redis.Redis(host='localhost', port=6379)
+r=redis.Redis(host='redis', port=6379)
 app = Flask(__name__)
 
 @app.route('/')
@@ -19,5 +19,5 @@ def visit(id):
 @app.route('/show/<id>')
 def show(id):
 	a=r.get(id)
-	return "visits: %s." % a
+	return "visits: %s" % str(a, 'ascii')
 app.run(host='0.0.0.0', port=81)

@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  redis:
+    image: redis
+    command: redis-server /usr/local/etc/redis/redis.conf
+    volumes:
+      - ./config/redis.conf:/usr/local/etc/redis/redis.conf
+
+  app:
+    build:
+      context: .
+      network: host
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - 81:81
