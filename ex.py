@@ -16,7 +16,7 @@ def index():
     return 'Web App with Python Flask!'
 
 
-ink = 0
+INK = 0
 
 
 @app.route('/visit/<tutre>')
@@ -37,7 +37,7 @@ def show(tutre):
     high level support foRED_RED.doing this and that.
     """
     a = RED_RED.get(tutre)
-    return "visits: %s" % str(a, 'ascii')
+    return f"visits: %s" % str(a, 'ascii')
 
 
 app.run(host='0.0.0.0', port=81)
