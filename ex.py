@@ -37,7 +37,7 @@ def show(tutre):
     high level support foRED_RED.doing this and that.
     """
     a = RED_RED.get(tutre)
-    return f"visits: %s" % str(a, 'ascii')
+    return "visits: %s" % str(a, 'ascii')
 
 
 app.run(host='0.0.0.0', port=81)
