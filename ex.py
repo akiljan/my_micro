@@ -9,7 +9,6 @@ app = Flask(__name__)
 
 
 @app.route('/')
-
 def index():
     """
     high level support for doing this and that.
@@ -29,7 +28,6 @@ def visit(tutre):
         r.incr(tutre)
     else:
         r.set(tutre, 1)
-
     return 'OK'
 
 
